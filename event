@@ -1,0 +1,26 @@
+定义：文档或浏览器窗口发生的一些特定交互瞬间。
+事件流：
+  事件冒泡（IE）：事件开始时由具体的元素（文档中嵌套最深的那个节点）接收，然后逐级向上传播到较为不具体的节点（文档）。
+      例：如果单击div，那么click事件会按照如下顺序传播：div-body-html-docment
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>前端学习计划</title>
+          </head>
+          <body>
+            <div id="box"></div>
+          </body>
+        </html>
+  事件捕获（Netscape）:不太具体的节点应该更早收到事件，而具体的节点应该最后收到事件。事件捕获的用意在于事件到达预定目标之前捕获它。
+      例：如果单击div，那么click事件会按照如下顺序传播：docment-html-body-div
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>前端学习计划</title>
+          </head>
+          <body>
+            <div id="box"></div>
+          </body>
+        </html>
+DOM2事件流：
+  
